@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<fx:root type="StackPane" id="StackPane" fx:id="messagePane" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="true" prefHeight="27.999977929684974" prefWidth="789.0" visible="false" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="789.0">
+      <children>
+        <Label id="erroMsg" fx:id="messageLabel" alignment="CENTER" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefHeight="28.0" prefWidth="789.0" style="-fx-background-color: rgba(0,0,0,0.6);&#10;-fx-border-color: rgba(200,200,200,0.5)" text="hello" textAlignment="CENTER" textFill="#00ff66" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+          <font>
+            <Font name="Arial" size="14.0" fx:id="x1" />
+          </font>
+          <stylesheets>
+            <URL value="@../../css/messageStyle.css" />
+          </stylesheets>
+        </Label>
+      </children>
+    </AnchorPane>
+  </children>
+</fx:root>

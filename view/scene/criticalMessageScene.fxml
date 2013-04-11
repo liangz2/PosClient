@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<fx:root type="StackPane" id="StackPane" fx:id="messagePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="true" prefHeight="103.0" prefWidth="279.0" visible="false" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="105.0" prefWidth="279.0">
+      <children>
+        <Label id="critcalMsg" fx:id="criticalMessageLabel" alignment="CENTER" contentDisplay="RIGHT" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="103.0" prefWidth="279.0" style="-fx-background-color: rgba(0,0,0,0.6);&#10;-fx-border-color: rgba(200,200,200,0.8)" text="" textAlignment="CENTER" visible="true" wrapText="true">
+          <font>
+            <Font name="Arial" size="14.0" />
+          </font>
+        </Label>
+      </children>
+    </AnchorPane>
+  </children>
+</fx:root>

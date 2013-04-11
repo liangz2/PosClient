@@ -1,0 +1,19 @@
+/* 
+    Document   : salesTable
+    Created on : 12-Oct-2012, 9:42:17 PM
+    Author     : Wilson
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+.table-row-cell:empty {
+    -fx-background-color: lightcyan;
+}
+
+.cell {
+    -fx-alignment: center;
+}
+
+.table-view {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+}

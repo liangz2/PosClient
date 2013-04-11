@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<fx:root type="StackPane" id="base" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="683.0" prefWidth="1134.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <VBox alignment="CENTER">
+      <children>
+        <AnchorPane id="AnchorPane" prefHeight="31.0" style="-fx-background-color: linear-gradient(to bottom,rgba(220,220,220,0.7), rgba(100,100,100,0.1));" VBox.vgrow="NEVER">
+          <children>
+            <Label layoutY="1.0" prefHeight="30.0" text="Search:" AnchorPane.leftAnchor="10.0" />
+            <TextField fx:id="searchBar" layoutY="5.0" prefHeight="22.999908447265625" prefWidth="201.0" promptText="example: PS3002" AnchorPane.leftAnchor="53.0" />
+            <Label id="productCountLabel" fx:id="productCount" maxHeight="31.0" maxWidth="-Infinity" prefHeight="30.999900000002526" prefWidth="162.0" text="Total Product Count:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="276.0" />
+            <Button fx:id="refreshButton" layoutY="5.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="120.0" text="Refresh Table" AnchorPane.leftAnchor="451.0" />
+          </children>
+        </AnchorPane>
+        <HBox id="HBox" alignment="CENTER" prefHeight="501.0" prefWidth="1134.0" VBox.vgrow="ALWAYS">
+          <children>
+            <TableView fx:id="productTable" prefHeight="652.0" prefWidth="872.0" HBox.hgrow="ALWAYS">
+              <columns>
+                <TableColumn sortable="false" style="" text="Model No." fx:id="model">
+                  <maxWidth>
+                    <Long fx:value="5000" />
+                  </maxWidth>
+                  <minWidth>
+                    <Long fx:value="75" />
+                  </minWidth>
+                  <prefWidth>
+                    <Long fx:value="120" />
+                  </prefWidth>
+                </TableColumn>
+                <TableColumn sortable="false" text="Product Name" fx:id="name">
+                  <prefWidth>
+                    <Long fx:value="325" />
+                  </prefWidth>
+                </TableColumn>
+                <TableColumn sortable="false" text="Quantity" fx:id="quantity">
+                  <maxWidth>
+                    <Long fx:value="5000" />
+                  </maxWidth>
+                  <minWidth>
+                    <Long fx:value="75" />
+                  </minWidth>
+                  <prefWidth>
+                    <Long fx:value="75" />
+                  </prefWidth>
+                </TableColumn>
+                <TableColumn sortable="false" text="Price" fx:id="price">
+                  <maxWidth>
+                    <Long fx:value="5000" />
+                  </maxWidth>
+                  <minWidth>
+                    <Long fx:value="60" />
+                  </minWidth>
+                  <prefWidth>
+                    <Long fx:value="75" />
+                  </prefWidth>
+                </TableColumn>
+                <TableColumn sortable="false" text="Weight" fx:id="weight">
+                  <maxWidth>
+                    <Long fx:value="5000" />
+                  </maxWidth>
+                  <minWidth>
+                    <Long fx:value="60" />
+                  </minWidth>
+                  <prefWidth>
+                    <Long fx:value="75" />
+                  </prefWidth>
+                </TableColumn>
+                <TableColumn sortable="false" text="Date Added In" fx:id="dateAdded">
+                  <maxWidth>
+                    <Long fx:value="5000" />
+                  </maxWidth>
+                  <minWidth>
+                    <Long fx:value="150" />
+                  </minWidth>
+                  <prefWidth>
+                    <Long fx:value="200" />
+                  </prefWidth>
+                </TableColumn>
+                <TableColumn sortable="false" text="Active" fx:id="status">
+                  <maxWidth>
+                    <Long fx:value="5000" />
+                  </maxWidth>
+                  <minWidth>
+                    <Long fx:value="50" />
+                  </minWidth>
+                  <prefWidth>
+                    <Long fx:value="50" />
+                  </prefWidth>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" sortable="false" text="Update" fx:id="update" />
+                <TableColumn prefWidth="75.0" sortable="false" text="Remove" fx:id="remove" />
+              </columns>
+              <stylesheets>
+                <URL value="@../../css/tableStyle.css" />
+              </stylesheets>
+            </TableView>
+            <Accordion>
+              <expandedPane>
+                <TitledPane fx:id="x2" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" minWidth="0.0" prefHeight="652.0" prefWidth="201.0" text="New Product">
+                  <content>
+                    <AnchorPane id="Content" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="628.0" prefWidth="197.0">
+                      <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Product Name:" />
+                        <Label layoutX="11.0" layoutY="235.0" text="Model No." />
+                        <TextField fx:id="newModel" layoutX="77.0" layoutY="232.0" prefWidth="105.0" style="" />
+                        <Label layoutX="39.0" layoutY="265.0" text="Price:" />
+                        <TextField fx:id="newPrice" layoutX="77.0" layoutY="262.0" prefWidth="105.0" />
+                        <Label layoutX="26.0" layoutY="294.0" text="Weight:" />
+                        <Label layoutX="21.0" layoutY="324.0" text="Quantity:" />
+                        <TextField id="newWight" fx:id="newWeight" layoutX="77.0" layoutY="291.0" prefWidth="105.0" />
+                        <TextField fx:id="newQuantity" layoutX="77.0" layoutY="321.0" prefWidth="105.0" />
+                        <CheckBox fx:id="newActive" layoutX="77.0" layoutY="445.0" mnemonicParsing="false" prefWidth="56.0" selected="true" text="Acitve" />
+                        <Button id="newProduct" fx:id="newProductButton" maxHeight="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="197.0" text="Add Prodcut" AnchorPane.bottomAnchor="0.0" />
+                        <TextArea fx:id="newName" layoutX="13.0" layoutY="44.0" prefWidth="168.9998779296875" style="" wrapText="true" />
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </TitledPane>
+              </expandedPane>
+              <panes>
+                <fx:reference source="x2" />
+                <TitledPane animated="false" text="New Product">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="untitled">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+          </children>
+        </HBox>
+      </children>
+      <prefHeight>
+        <Long fx:value="-1" />
+      </prefHeight>
+      <prefWidth>
+        <Long fx:value="1026" />
+      </prefWidth>
+      <StackPane.margin>
+        <Insets fx:id="x1" />
+      </StackPane.margin>
+    </VBox>
+  </children>
+  <minHeight>
+    <Long fx:value="-1" />
+  </minHeight>
+  <minWidth>
+    <Long fx:value="-1" />
+  </minWidth>
+</fx:root>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<fx:root type="StackPane" id="base" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="1026.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <VBox alignment="CENTER" StackPane.margin="$x1">
+      <children>
+        <TableView fx:id="productTable" prefWidth="1026.0" VBox.vgrow="ALWAYS">
+          <columns>
+            <TableColumn editable="false" sortable="false" text="Model No." fx:id="model">
+              <maxWidth>
+                <Long fx:value="5000" />
+              </maxWidth>
+              <minWidth>
+                <Long fx:value="75" />
+              </minWidth>
+              <prefWidth>
+                <Long fx:value="120" />
+              </prefWidth>
+            </TableColumn>
+            <TableColumn editable="false" sortable="false" text="Product Name" fx:id="name">
+              <prefWidth>
+                <Long fx:value="325" />
+              </prefWidth>
+            </TableColumn>
+            <TableColumn editable="false" sortable="false" text="Quantity" fx:id="quantity">
+              <maxWidth>
+                <Long fx:value="5000" />
+              </maxWidth>
+              <minWidth>
+                <Long fx:value="75" />
+              </minWidth>
+              <prefWidth>
+                <Long fx:value="75" />
+              </prefWidth>
+            </TableColumn>
+            <TableColumn editable="false" sortable="false" text="Price" fx:id="price">
+              <maxWidth>
+                <Long fx:value="5000" />
+              </maxWidth>
+              <minWidth>
+                <Long fx:value="60" />
+              </minWidth>
+              <prefWidth>
+                <Long fx:value="75" />
+              </prefWidth>
+            </TableColumn>
+            <TableColumn editable="false" sortable="false" text="Weight" fx:id="weight">
+              <maxWidth>
+                <Long fx:value="5000" />
+              </maxWidth>
+              <minWidth>
+                <Long fx:value="60" />
+              </minWidth>
+              <prefWidth>
+                <Long fx:value="75" />
+              </prefWidth>
+            </TableColumn>
+            <TableColumn editable="false" sortable="false" text="Date Added In" fx:id="dateAdded">
+              <maxWidth>
+                <Long fx:value="5000" />
+              </maxWidth>
+              <minWidth>
+                <Long fx:value="150" />
+              </minWidth>
+              <prefWidth>
+                <Long fx:value="200" />
+              </prefWidth>
+            </TableColumn>
+            <TableColumn editable="false" sortable="false" text="Active" fx:id="status">
+              <maxWidth>
+                <Long fx:value="5000" />
+              </maxWidth>
+              <minWidth>
+                <Long fx:value="50" />
+              </minWidth>
+              <prefWidth>
+                <Long fx:value="50" />
+              </prefWidth>
+            </TableColumn>
+          </columns>
+          <prefHeight>
+            <Long fx:value="-1" />
+          </prefHeight>
+        </TableView>
+        <HBox VBox.vgrow="ALWAYS">
+          <children>
+            <Label id="searchLabel" prefWidth="579.0" text="Search:" HBox.hgrow="ALWAYS">
+              <maxHeight>
+                <Long fx:value="16" />
+              </maxHeight>
+              <prefHeight>
+                <Long fx:value="16" />
+              </prefHeight>
+            </Label>
+            <Label id="productCountLabel" prefWidth="346.0" text="Total Product Count" HBox.hgrow="ALWAYS">
+              <maxHeight>
+                <Long fx:value="16" />
+              </maxHeight>
+              <prefHeight>
+                <Long fx:value="16" />
+              </prefHeight>
+            </Label>
+          </children>
+          <maxHeight>
+            <Long fx:value="16" />
+          </maxHeight>
+          <prefHeight>
+            <Long fx:value="16" />
+          </prefHeight>
+          <prefWidth>
+            <Long fx:value="1026" />
+          </prefWidth>
+          <VBox.margin>
+            <Insets fx:id="x1" />
+          </VBox.margin>
+        </HBox>
+      </children>
+      <prefHeight>
+        <Long fx:value="-1" />
+      </prefHeight>
+      <prefWidth>
+        <Long fx:value="1026" />
+      </prefWidth>
+    </VBox>
+  </children>
+  <minHeight>
+    <Long fx:value="-1" />
+  </minHeight>
+  <minWidth>
+    <Long fx:value="-1" />
+  </minWidth>
+  <prefHeight>
+    <Long fx:value="683" />
+  </prefHeight>
+</fx:root>

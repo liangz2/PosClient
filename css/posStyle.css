@@ -1,0 +1,62 @@
+    /* 
+    Document   : initButtonStyle
+    Created on : Jul 23, 2012, 1:29:56 AM
+    Author     : Zhengyi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+/*
+.text {
+    -fx-effect: dropshadow(one-pass-box , white, 0, 1 , 0, 1);
+}
+*/
+.tab,
+.button,
+.table-view .column-header-background,
+.menu-button,
+.titled-pane,
+.tab-pane {
+    -fx-base: white;
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    -fx-background-insets: 0, 1;
+    -fx-font-size: 12px;
+    -fx-background-radius: 0, 0, 0, 0;
+}
+
+.check-box {
+    -fx-base: white;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 0, 0, 0, 0;
+}
+
+.titled-pane .title {
+    -fx-background-radius: 0, 0, 0, 0;
+}
+
+.combo-box .arrow-button {
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-background-insets: 0, 1;
+}
+
+.combo-box {
+    -fx-base: white;
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    -fx-background-radius: 0, 0, 0, 0;
+    -fx-background-insets: 0, 1;
+}
+
+.categoryHolder {
+    -fx-padding: 20px;
+}
+
+.text-input {
+    -fx-base: white;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: #AAA;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: lightcyan;
+}

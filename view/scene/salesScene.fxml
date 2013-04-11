@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<fx:root type="StackPane" id="StackPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="1209.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <AnchorPane id="AnchorPane" fx:id="salesPane" prefHeight="683.0" prefWidth="1026.0">
+      <children>
+        <Label layoutY="256.0" minHeight="14.0" prefHeight="16.0" text="Subtotal:" AnchorPane.rightAnchor="235.0">
+          <prefWidth>
+            <Long fx:value="50" />
+          </prefWidth>
+        </Label>
+        <Label layoutY="282.0" minHeight="14.0" prefHeight="16.0" prefWidth="24.0" text="GST" AnchorPane.rightAnchor="269.0" />
+        <TextField fx:id="gstTotal" editable="false" layoutY="278.0" prefWidth="215.0" AnchorPane.rightAnchor="14.0" />
+        <Label layoutY="306.0" minHeight="14.0" prefHeight="16.0" prefWidth="24.0" text="PST" AnchorPane.rightAnchor="269.0" />
+        <TextField id="pstTotal" fx:id="pstTtotal" editable="false" layoutY="303.0" prefWidth="215.0" AnchorPane.rightAnchor="14.0" />
+        <TextField fx:id="customerId" layoutX="90.0" layoutY="92.0" prefWidth="76.0" />
+        <TextField fx:id="refNum" layoutX="90.0" layoutY="57.0" prefWidth="76.0" />
+        <Label layoutX="14.0" layoutY="62.0" minHeight="14.0" prefHeight="16.0" prefWidth="76.0" text="Reference No." />
+        <Label layoutX="14.0" layoutY="97.0" minHeight="14.0" prefHeight="15.0" prefWidth="76.0" text="Customer No." />
+        <Button id="browse" fx:id="paymentButton" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="52.0" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="148.0" />
+        <Button fx:id="next" mnemonicParsing="false" prefHeight="52.0" prefWidth="52.0" text="" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="14.0" />
+        <Button id="report" fx:id="previous" disable="false" mnemonicParsing="false" prefHeight="52.0" prefWidth="52.0" text="" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="82.0" />
+        <TableView id="purchaseInfo" fx:id="purchaseItems" editable="true" prefHeight="250.0" prefWidth="998.0" AnchorPane.bottomAnchor="67.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="366.0">
+          <columns>
+            <TableColumn minWidth="85.0" prefWidth="85.0" sortable="false" style="" text="Item" fx:id="model" />
+            <TableColumn prefWidth="75.0" sortable="false" text="Quantity" fx:id="quantity" />
+            <TableColumn editable="false" minWidth="250.0" prefWidth="250.0" sortable="false" text="Description" fx:id="description" />
+            <TableColumn editable="true" prefWidth="100.0" sortable="false" text="DateCode" fx:id="dateCode" />
+            <TableColumn editable="true" sortable="false" text="Notes" fx:id="notes">
+              <minWidth>
+                <Long fx:value="10" />
+              </minWidth>
+              <prefWidth>
+                <Long fx:value="200" />
+              </prefWidth>
+            </TableColumn>
+            <TableColumn editable="false" prefWidth="75.0" sortable="false" text="List Price" fx:id="listPrice" />
+            <TableColumn editable="true" prefWidth="75.0" sortable="false" text="Unit Price" fx:id="unitPrice" />
+            <TableColumn editable="false" prefWidth="75.0" sortable="false" text="Total" fx:id="total" />
+            <TableColumn editable="false" prefWidth="75.0" sortable="false" text="Allocated" fx:id="allocated" />
+          </columns>
+          <maxHeight>
+            <Long fx:value="-1" />
+          </maxHeight>
+          <maxWidth>
+            <Long fx:value="-1" />
+          </maxWidth>
+          <stylesheets>
+            <URL value="@../../css/tableStyle.css" />
+          </stylesheets>
+        </TableView>
+        <Label layoutX="175.0" layoutY="62.0" minHeight="14.0" prefHeight="16.0" prefWidth="64.0" text="Invoice No." />
+        <TextField fx:id="invoiceNum" editable="false" layoutX="236.0" layoutY="57.0" prefWidth="76.0" />
+        <Button id="" fx:id="invLookUpButton" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="52.0" prefWidth="52.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="14.0">
+          <graphicTextGap>
+            <Long fx:value="0" />
+          </graphicTextGap>
+        </Button>
+        <Label fx:id="status" minHeight="16.0" prefHeight="22.0" prefWidth="134.0" text="Status: " textFill="#0029ff">
+          <font>
+            <Font size="14.0" fx:id="x1" />
+          </font>
+          <layoutX>
+            <Long fx:value="426" />
+          </layoutX>
+          <layoutY>
+            <Long fx:value="17" />
+          </layoutY>
+        </Label>
+        <TextField fx:id="enteredSales" editable="false" layoutY="51.0" prefWidth="134.0" AnchorPane.rightAnchor="261.0" />
+        <Label layoutY="53.0" minHeight="14.0" prefHeight="15.0" prefWidth="45.0" text="Entered:" AnchorPane.rightAnchor="396.0" />
+        <TextField fx:id="orderDate" disable="false" editable="false" layoutY="19.0" prefHeight="24.0" prefWidth="106.0" AnchorPane.rightAnchor="42.0" />
+        <Label font="$x1" layoutY="20.0" minHeight="14.0" prefHeight="22.0" prefWidth="76.0" text="Order Date:" AnchorPane.rightAnchor="151.0" />
+        <Label layoutY="53.0" minHeight="14.0" prefHeight="15.0" prefWidth="45.0" text="Sold by:" AnchorPane.rightAnchor="153.0" />
+        <TextField fx:id="tenderedDate" editable="false" layoutY="81.0" prefWidth="106.0" AnchorPane.rightAnchor="42.0" />
+        <Label font="$x1" layoutY="79.0" minHeight="14.0" prefHeight="22.0" prefWidth="90.0" text="Tendered On:" AnchorPane.rightAnchor="148.0" />
+        <Button layoutY="20.0" minWidth="24.0" mnemonicParsing="false" prefWidth="24.0" text="..." AnchorPane.rightAnchor="14.0">
+          <graphicTextGap>
+            <Long fx:value="4" />
+          </graphicTextGap>
+        </Button>
+        <Button alignment="CENTER" layoutY="81.0" minWidth="24.0" mnemonicParsing="false" prefWidth="24.0" text="..." AnchorPane.rightAnchor="14.0">
+          <graphicTextGap>
+            <Long fx:value="4" />
+          </graphicTextGap>
+        </Button>
+        <TextField id="subTotal" fx:id="purchaseSubTotal" editable="false" layoutY="253.0" prefWidth="214.99990000000253" text="0.00" AnchorPane.rightAnchor="14.0" />
+        <TextField fx:id="gst" alignment="CENTER" editable="false" layoutY="278.0" prefWidth="31.0" promptText="" text="5%" AnchorPane.rightAnchor="238.0" />
+        <TextField fx:id="pst" editable="false" layoutY="303.0" prefWidth="31.0" AnchorPane.rightAnchor="238.0" />
+        <TextField fx:id="purchaseTotal" editable="false" layoutY="328.0" prefWidth="215.0" text="0.00" AnchorPane.rightAnchor="14.0" />
+        <Label layoutY="331.0" minHeight="14.0" prefHeight="16.0" prefWidth="31.0" text="Total:" AnchorPane.rightAnchor="238.0" />
+        <TabPane layoutX="14.0" layoutY="124.0" prefHeight="226.0" prefWidth="441.0" style="-fx-border-color: #AAA;&#10;-fx-border-style: solid;" tabClosingPolicy="UNAVAILABLE" tabMinWidth="185.0">
+          <tabs>
+            <Tab text="Customer Info">
+              <content>
+                <AnchorPane prefHeight="197.0" prefWidth="444.0">
+                  <children>
+                    <TextField fx:id="firstName" editable="false" layoutX="77.0" layoutY="8.0" prefWidth="134.0" />
+                    <Label layoutX="7.0" layoutY="14.0" minHeight="14.0" prefHeight="16.0" prefWidth="76.0" text="First Name:" />
+                    <Label layoutX="230.0" layoutY="14.0" minHeight="14.0" prefHeight="16.0" prefWidth="64.0" text="Last Name:" />
+                    <TextField fx:id="lastName" editable="false" layoutX="295.0" layoutY="11.0" prefWidth="134.00009999999747" />
+                    <Label layoutX="7.0" layoutY="43.0" minHeight="14.0" prefHeight="16.0" prefWidth="61.0" text="Phone No.:" />
+                    <TextField fx:id="phoneNo" editable="false" layoutX="77.0" layoutY="40.0" prefWidth="134.0" />
+                    <TextArea fx:id="customerInfo" editable="false" layoutX="7.0" layoutY="76.0" prefHeight="80.0" prefWidth="424.0" wrapText="true" />
+                    <Button disable="true" layoutX="380.0" layoutY="165.0" mnemonicParsing="false" prefWidth="52.0001220703125" text="Edit">
+                      <graphicTextGap>
+                        <Long fx:value="4" />
+                      </graphicTextGap>
+                    </Button>
+                    <Label layoutX="231.0" layoutY="43.0" minHeight="14.0" prefHeight="16.0" prefWidth="31.0" text="Email:" />
+                    <TextField fx:id="email" editable="false" layoutX="270.0" layoutY="40.0" prefWidth="161.0" />
+                    <Button disable="true" layoutX="307.0" layoutY="165.0" mnemonicParsing="false" prefWidth="51.9998779296875" text="New" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Work Order">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <TextArea fx:id="workOrder" prefHeight="192.99990000000253" prefWidth="434.0" promptText="Description of problems and work" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+          </tabs>
+        </TabPane>
+        <ComboBox layoutY="17.0" prefHeight="21.0" prefWidth="134.0" visibleRowCount="5" AnchorPane.rightAnchor="261.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <ComboBox fx:id="soldBy" layoutY="51.0" prefHeight="21.0" prefWidth="134.0" visibleRowCount="5" AnchorPane.rightAnchor="15.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <TextField fx:id="searchBox" layoutX="16.0" layoutY="17.0" prefWidth="294.0" promptText="phone#, customer#, invoice# or name" />
+        <Button fx:id="savePurchase" disable="false" mnemonicParsing="false" prefHeight="52.0" prefWidth="52.0" text="Save" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="243.0" />
+      </children>
+      <maxHeight>
+        <Long fx:value="-1" />
+      </maxHeight>
+      <maxWidth>
+        <Long fx:value="-1" />
+      </maxWidth>
+    </AnchorPane>
+  </children>
+</fx:root>

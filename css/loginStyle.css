@@ -1,0 +1,17 @@
+/* 
+    Document   : loginStyle
+    Created on : 7-Aug-2012, 10:47:26 AM
+    Author     : Zhengyi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+.button,
+.check-box {
+    -fx-base: white;
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+    -fx-background-insets: 0, 1;
+    -fx-font-size: 12px;
+    -fx-background-radius: 0, 0, 0, 0;
+}
