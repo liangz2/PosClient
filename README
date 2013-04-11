@@ -1,0 +1,6 @@
+PosClient is a client software designed to communicate with an eCommerce hosting web server where it also hosts the inventory data.
+
+This software is written in JavaFX in order to acheive rich user interface features and the abilities to open as a webapp as well as a standalone program.
+
+Database calls within the program is merely an interface where all works are done on the server end using JSP server-side scripting and transfered over 
+through the net, by using remote method invocation.
